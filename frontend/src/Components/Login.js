@@ -12,6 +12,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import loginServ from '../Services/loginServ'
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -32,11 +33,14 @@ const defaultTheme = createTheme();
 export default function Login() {
   const handleSubmit = (event) => {
     event.preventDefault();
+    alert("submit clicked")
     const data = new FormData(event.currentTarget);
-    console.log({
+    const user ={
       email: data.get('email'),
       password: data.get('password'),
-    });
+    }
+    console.log(user);
+    loginServ(user);
   };
 
   return (

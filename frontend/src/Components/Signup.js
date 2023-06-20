@@ -12,6 +12,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import signServ from '../Services/signServ'
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -33,10 +34,16 @@ export default function SignIn() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
+    const user = {
+      name: data.get('name'),
+
       email: data.get('email'),
+      phone: data.get('phone'),
+      work:data.get('work'),
       password: data.get('password'),
-    });
+      cpassword:data.get('cpassword')
+    }
+    signServ(user)
   };
 
   return (
@@ -111,10 +118,10 @@ export default function SignIn() {
               required
               
 
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
+              name="cpassword"
+              label="Confirm Password"
+              type="cpassword"
+              id="cpassword"
               autoComplete="current-password"
             />
             <FormControlLabel

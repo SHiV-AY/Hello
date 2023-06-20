@@ -4,7 +4,6 @@ require('../Database/DBconnection')
 const User = require("../Models/userSchema");
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-
 const Middleware = (req, res, next) => {
 
     console.log("pls log in first");
@@ -37,6 +36,7 @@ router.get('/contact', (req, res) => {
 router.post("/login", (req, res) => {
     console.log("Login Successfull!");
     const { email, password } = req.body;
+    console.log(email,password);
 
     if (!email || !password) {
 
@@ -55,7 +55,9 @@ router.post("/login", (req, res) => {
             //     expires: new Date(Date.now() + 25892000),
             //     httpOnly: true
             // });
-            res.status(201).send("Login Successfull!");
+            res.status(201).send({
+                "token":token
+            });
         }
 
     }).catch(() => {
@@ -75,6 +77,7 @@ router.post("/login", (req, res) => {
 
 
 router.post('/signup', (req, res) => {
+    console.log(req.body);
     const { name, email, phone, work, password, cpassword } = req.body;
 
     if (!name || !email || !phone || !work || !password || !cpassword) {
@@ -87,6 +90,7 @@ router.post('/signup', (req, res) => {
     }
     else {
         User.findOne({ email: email }).then((userExist) => {
+            console.log(userExist);
             if (userExist) {
                 return res.status(422).send("User Alread Exist!");
             }
