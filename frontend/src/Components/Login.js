@@ -75,7 +75,8 @@ export default function Login() {
               id="email"
               label="Email Address"
               name="email"
-              autoComplete="email"
+              
+              // autoComplete="email"
               autoFocus
             />
             <TextField
@@ -86,7 +87,7 @@ export default function Login() {
               label="Password"
               type="password"
               id="password"
-              autoComplete="current-password"
+              // autoComplete="current-password"
             />
              <FormControlLabel
             style={{marginLeft:"40%"}}
@@ -94,6 +95,7 @@ export default function Login() {
               label="Remember me"
             />
            <Button
+           
               type="submit"
               style={{marginLeft:"45%"}}
               variant="contained"
@@ -103,12 +105,12 @@ export default function Login() {
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="#" variant="body2">
+                <Link style={{color:'white'}} href="#" variant="body2">
                   Forgot password?
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="#" variant="body2">
+                <Link style={{color:'white'}} href="/signup" variant="body2">
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>

@@ -3,11 +3,10 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useNavigate } from 'react-router-dom';
-
+import Fab from '@mui/material/Fab';
 const Navbar = () => {
   const navigate = useNavigate();
 
@@ -49,14 +48,21 @@ const Navbar = () => {
         >
           <MenuIcon />
         </IconButton>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          MyProject
+        <Typography variant="h6" sx={{ flexGrow: 1 }}>
+        <Fab variant="extended" color='white' onClick={callHome} size='small' style={{margin:'5px',backgroundColor:"skyblue"}}>MyProject</Fab>
         </Typography>
-        <Button color="inherit" onClick={callHome} >Home</Button>
+        
+
+        {/* <Button color="inherit" onClick={callHome} >Home</Button>
         <Button color="inherit" onClick={callAbout}>About</Button>
         <Button color="inherit" onClick={callcontact}>Contact</Button>
-        <Button color="inherit" onClick={callLogin}>Login</Button>
-        <Button color="inherit" onClick={callSignup}>Signup</Button>
+        <Button color="inherit" onClick={callLogin}>Login</Button> */}
+        {/* <Button color="inherit" onClick={callSignup}>Signup</Button> */}
+        <Fab variant="extended" onClick={callHome} size='small' style={{margin:'5px',backgroundColor:"skyblue"}}>Home</Fab>
+        <Fab variant="extended" onClick={callcontact} size='small'style={{margin:'5px',backgroundColor:"skyblue"}}>Contact</Fab>
+        <Fab variant="extended" onClick={callAbout} size='small'style={{margin:'5px',backgroundColor:"skyblue"}}>About</Fab>
+        <Fab variant="extended" onClick={callLogin} size='small'style={{margin:'5px',backgroundColor:"skyblue"}}>Login</Fab>
+        <Fab variant="extended" onClick={callSignup} size='small'style={{margin:'5px',backgroundColor:"skyblue"}}>Signup</Fab>
 
       </Toolbar>
     </AppBar>
