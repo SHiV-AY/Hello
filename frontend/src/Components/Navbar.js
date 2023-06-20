@@ -29,15 +29,23 @@ const Navbar = () => {
   
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-    <AppBar position="static">
+    <div >
+    <Box sx={{ 
+      // flexGrow: 1,
+      // backgroundImage:'url("https://cutewallpaper.org/29/download-wallpaper-engin/1801932754.jpg")',
+
+      // backgroundSize:"cover"
+      
+      }} >
+    <AppBar style={{ backgroundImage:'url("https://wallpapers.com/images/hd/popular-film-your-name-anime-vrf8kphnyzh4o0bk.jpg")',backgroundSize:"1500px",backgroundPositionX:"-15px",backgroundPositionY:"-15px"}} position="static">
       <Toolbar>
         <IconButton
           size="large"
           edge="start"
           color="inherit"
           aria-label="menu"
-          sx={{ mr: 2 }}
+          sx={{ mr: 2
+           }}
         >
           <MenuIcon />
         </IconButton>
@@ -53,6 +61,7 @@ const Navbar = () => {
       </Toolbar>
     </AppBar>
   </Box>
+  </div>
   )
 }
 

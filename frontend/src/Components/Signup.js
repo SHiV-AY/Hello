@@ -56,7 +56,10 @@ export default function SignIn() {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            boxShadow: 6
+            boxShadow: 6,
+            opacity:1,
+            backgroundImage:'url("https://wallpapers.com/images/hd/popular-film-your-name-anime-vrf8kphnyzh4o0bk.jpg")',
+            backgroundSize:"cover"
           }}
         
         ><br></br>

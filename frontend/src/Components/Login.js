@@ -44,16 +44,20 @@ export default function Login() {
   };
 
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <div >   <ThemeProvider theme={defaultTheme}>
       <Container component="main" maxWidth="md">
         <CssBaseline />
-        <Box
+        <Box 
+        
           sx={{
             marginTop: 8,
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            boxShadow: 6
+            boxShadow: 6,
+            opacity:10,
+            backgroundImage:'url("https://wallpapers.com/images/hd/popular-film-your-name-anime-vrf8kphnyzh4o0bk.jpg")',
+            backgroundSize:"cover"
           }}
         
         ><br></br>
@@ -63,7 +67,7 @@ export default function Login() {
           <Typography component="h1" variant="h5">
             Log in
           </Typography>
-          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+          <Box  component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             <TextField
               margin="normal"
               required
@@ -115,5 +119,7 @@ export default function Login() {
         <Copyright sx={{ mt: 8, mb: 4 }} />
       </Container>
     </ThemeProvider>
+    </div>
+ 
   );
 }

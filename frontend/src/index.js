@@ -10,7 +10,7 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
-  <div>
+  <div style={{height:"100%",backgroundSize:"cover"}}>
     <App/>
   </div>
 
