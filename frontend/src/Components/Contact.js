@@ -7,7 +7,13 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import loginServ from '../Services/loginServ'
+import loginServ from '../Services/loginServ';
+import Avatar from '@mui/material/Avatar';
+import TextField from '@mui/material/TextField';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
+import Button from '@mui/material/Button';
+import AssignmentIcon from '@mui/icons-material/Assignment';
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
@@ -159,34 +165,99 @@ function Contact() {
 
 
       </div>
-      <div style={{ border: 'solid' }}>
-        <ThemeProvider theme={defaultTheme}>
-          <Container maxWidth={false} component="main" >
-            <Box
-
-              sx={{
-
-
-                marginTop: 3,
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                boxShadow: 6,
-                opacity: 10,
-                maxWidth: 'false',
-                backgroundImage: 'url("https://wallpapers.com/images/hd/popular-film-your-name-anime-vrf8kphnyzh4o0bk.jpg")',
-                backgroundPositionX: '-90px',
-                backgroundPositionY: '-400px'
+     <div>
+     <ThemeProvider theme={defaultTheme}>
+      <Container component="main" maxWidth="md">
+        <Box
+          sx={{
+            marginTop: 4,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            boxShadow: 6,
+            opacity:1,
+            backgroundImage:'url("https://wallpapers.com/images/hd/popular-film-your-name-anime-vrf8kphnyzh4o0bk.jpg")',
+            backgroundSize:"cover"
+          }}
+        
+        ><br></br>
+          <Avatar sx={{ backgroundColor:'purple'}}>
+        <AssignmentIcon />
+      </Avatar>
+            
+          <Typography component="h1" variant="h5">
+            Get in Touch
+          </Typography>
+          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1, mb:10}}>
+          <TextField
+              margin="normal"
+              required
+              style={{marginRight:"4%",marginLeft:"4%"}}
+              id="name"
+              label="Name"
+              name="name"
+              autoComplete="name"
+            />
+            <TextField
+              margin="normal"
+              required
+              style={{marginRight:"3%"}}
+              id="email"
+              label="Email Address"
+              name="email"
+              autoComplete="email"
+            />
+            <TextField
+              margin="normal"
+              required
+              id="phone"
+              label="Phone Number"
+              name="phone"
+              autoComplete="phone"
+            />
+            <TextField
+              margin="normal"
+              required
+              inputProps={{
+                style: {
+                  height: "200px",
+                  width:"744px"
+                }
               }}
+              autoFocus
+              id="massage"
+              label="Massage "
+              name="massage"
+              autoComplete="massage"
+              style={{marginLeft:"4%",height:"100px"}}
 
+            />
+            <br></br>
+            
+           
+            <Button
+              type="submit"
+              style={{marginLeft:"45%",marginTop:"15%"}}
+              variant="contained"
+             
             >
+              Submit
+            </Button>
+            
+          </Box>
+         
+        </Box>
+        <Copyright sx={{ mt: 8, mb: 4 }} />
+      </Container>
+    </ThemeProvider>
+     </div>
 
 
-            </Box>
 
-          </Container>
-        </ThemeProvider>
-      </div>
+
+
+
+
     </div>
 
 
