@@ -65,7 +65,7 @@ export default function Login() {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Log in
+            Log in 
           </Typography>
           <Box  component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             <TextField
@@ -76,7 +76,6 @@ export default function Login() {
               label="Email Address"
               name="email"
               
-              // autoComplete="email"
               autoFocus
             />
             <TextField

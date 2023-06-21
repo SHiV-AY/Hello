@@ -183,7 +183,7 @@ function Contact() {
       </Avatar>
             
           <Typography component="h1" variant="h5">
-            Get in Touch
+            Get in Touch !
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1, mb:10}}>
           <TextField
