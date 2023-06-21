@@ -22,9 +22,9 @@ const Navbar = () => {
   const callHome = ()=>{
     navigate('/');
   }
-  const callSignup = ()=>{
-    navigate('/signup');
-  }
+  // const callSignup = ()=>{
+  //   navigate('/signup');
+  // }
   
 
   return (
@@ -59,10 +59,10 @@ const Navbar = () => {
         <Button color="inherit" onClick={callLogin}>Login</Button> */}
         {/* <Button color="inherit" onClick={callSignup}>Signup</Button> */}
         <Fab variant="extended" onClick={callHome} size='small' style={{margin:'5px',backgroundColor:"skyblue"}}>Home</Fab>
+        <Fab variant="extended" onClick={callLogin} size='small'style={{margin:'5px',backgroundColor:"skyblue"}}>Login</Fab>
+        {/* <Fab variant="extended" onClick={callSignup} size='small'style={{margin:'5px',backgroundColor:"skyblue"}}>Signup</Fab> */}
         <Fab variant="extended" onClick={callcontact} size='small'style={{margin:'5px',backgroundColor:"skyblue"}}>Contact</Fab>
         <Fab variant="extended" onClick={callAbout} size='small'style={{margin:'5px',backgroundColor:"skyblue"}}>About</Fab>
-        <Fab variant="extended" onClick={callLogin} size='small'style={{margin:'5px',backgroundColor:"skyblue"}}>Login</Fab>
-        <Fab variant="extended" onClick={callSignup} size='small'style={{margin:'5px',backgroundColor:"skyblue"}}>Signup</Fab>
 
       </Toolbar>
     </AppBar>

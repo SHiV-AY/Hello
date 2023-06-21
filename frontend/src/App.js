@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Link, BrowserRouter, Routes } from 'react-router-dom';
+import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import React from 'react'
 import Home from './Components/Home';
 import SignUp from './Components/Signup';
@@ -11,7 +11,8 @@ const App = () => {
     <>
 
       <BrowserRouter>
-        <div >
+        <div style={{backgroundImage:'url("https://wallpaperaccess.com/full/1655659.jpg")',backgroundRepeat: 'no-repeat',backgroundSize:"cover",height:"100vh"
+}}>
           <Header />
           
 
