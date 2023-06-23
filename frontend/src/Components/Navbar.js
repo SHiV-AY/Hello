@@ -28,7 +28,7 @@ const Navbar = () => {
   
 
   return (
-    <div >
+    <div style={{position:"fixed",top:"0px",left:"0px",right:"0px"}}>
     <Box sx={{ 
       // flexGrow: 1,
       // backgroundImage:'url("https://cutewallpaper.org/29/download-wallpaper-engin/1801932754.jpg")',
